@@ -14,9 +14,15 @@
  *= require_self
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 
-body {
-	padding-top: 40px;
-}
+ body {
+ 	padding-top: 40px;
+ };
+
+ html, body {
+ 	height: 100%;
+ 	padding: 0;
+ 	background-color: #77C9D4;
+ };

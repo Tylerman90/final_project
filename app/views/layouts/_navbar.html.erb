@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -7,18 +7,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Philly Food Trucks", root_path, class:"navbar-brand" %>
-
+      <a class="navbar-brand"><%= link_to root_path, class: "backhome" do %><strong>Philly Food Trucks</strong><%end%></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <% if current_user %>
+        <li id="navforuser">Logged in as <strong><%= current_user.first_name + " " + current_user.last_name %></strong></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
-      <li>
-      <% if current_user %>
-      <%= link_to "sign out", destroy_user_session_path, method: :delete %>
-      <% end %>
-        
-      </li>
-        <li><a href="../navbar-static-top/">Static top</a></li>
+        <li><%= link_to "sign out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "sign in", new_user_session_path %></li>
+        <li><%= link_to "sign up", new_user_registration_path %></li>
+        <% end %>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
