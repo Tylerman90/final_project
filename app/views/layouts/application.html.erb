@@ -3,16 +3,21 @@
 <head>
 	<title>FinalProject</title>
 	<%= csrf_meta_tags %>
-
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<meta name="viewport" content="initial-scale=1.0">
+	<meta charset="utf-8">
 </head>
 
 <body>
-
 	<%= render "layouts/navbar" %>
+	<%= yield %>
+	<div id="map"></div>
+	
 	<div class="container">
-		<%= yield %>
 	</div>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5-Nsuu-oedOrAu6Kcy-JbuhgGIRtS_c0&callback=initMap"
+	async defer></script>
 </body>
 </html>
