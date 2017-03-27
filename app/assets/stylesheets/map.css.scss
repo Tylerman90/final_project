@@ -1,8 +1,11 @@
 #map {
- 	height: 70%;
- 	max-height:400px;
- 	width: 70%;
- 	max-width: 850px;
- 	margin: 75px auto;
- 	border-radius: 10px; 
- };
+	height: 70%;
+	max-height:400px;
+	width: 70%;
+	max-width: 850px;
+	margin: 75px auto;
+	border-radius: 10px; 
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-webkit-mask-image: -webkit-radial-gradient(white, black);
+};
+
