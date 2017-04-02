@@ -17,7 +17,7 @@ function initMap() {
     '</div>'+
     '<h1 id="firstHeading" class="firstHeading">Imran Food Cart</h1>'+
     '<div id="bodyContent">'+
-    ' <p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194"> https://en.wikipedia.org/w/index.php?title=Uluru</a> (last visited June 22, 2009).</p></div></div>'
+    ' <p><a href="/images/IMG_1336.jpg">Food Truck</a></p></div></div>'
   };
 
 
